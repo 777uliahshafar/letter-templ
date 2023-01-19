@@ -1,0 +1,172 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Recommendation Letter (better one page, but more pages would also be fine)
+% LaTeX/Overleaf Template
+% Version 1.0 (December 24, 2022)
+% This file is an original template
+%
+% Authors: Yidian Wang
+% (email: wangydian@163.com)
+% Happy to hear any suggestions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%!TEX program = xelatex
+\PassOptionsToPackage{quiet}{fontspec}
+\documentclass[12pt,a4paper]{letter}
+\usepackage{ctex}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2.75cm, right=2.75cm, top=1.50cm, bottom=1.50cm]{geometry}
+\usepackage{times}%Times New Roman font
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage{color}
+\definecolor{darkblue}{RGB}{25,25,112}
+\usepackage{multirow}
+\usepackage[colorlinks]{hyperref}
+\setlength{\parindent}{0pt} %Paragraph indentation
+\setlength{\parskip}{1em} %Vertical space between paragraphs
+\pagestyle{empty} % Suppress headers and footers
+\usepackage{comment}
+
+\usepackage[en-GB,calc, showdow]{datetime2} %Formating date or DTMtoday command, files ldf needs customization. Removes showdayofweek.
+\DTMlangsetup{ord=raise,monthyearsep={,\space}}
+\DTMsavedate{mydate}{2023-01-20}
+%----------------------------------------------------------------------------------------
+%	DEFINE CUSTOM COMMANDS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\Sch}[1]{\renewcommand{\Sch}{#1}}
+\newcommand{\Dear}[1]{\renewcommand{\Dear}{#1}}
+
+\Dear{Scholarship Review Committee}
+\Sch{Your Scholarship}
+
+\newcommand{\Dearblock}{
+	\parbox[t]{0.48\textwidth}{ % Box holding the author details; width value specifies where it starts and ends, increase to move details left
+		\footnotesize % Use a smaller font size for the details
+		\textit{\Dear}\\ % The author details text, all italicised
+\\
+%		\Sch\\ % Author name
+	}
+}
+
+
+\begin{document}
+
+%-----------------------------Letterhead-----------------------------%
+%%%Note: please do not change anything
+	\begin{minipage}[c]{0.13\linewidth}
+			\centering
+			\includegraphics[height=2.3cm]{logo.png}
+%			\vspace{0.2em}
+	\end{minipage}
+\begin{minipage}[c]{35em}
+	\begin{spacing}{0.5}
+            \color{darkblue}
+		\begin{tabular}{p{6cm}>{\raggedleft\arraybackslash}p{6.7cm}}
+				%\cline{1-2}
+%				\multirow{2}{*}{\bfseries KEMENTRIAN PENDIDIKAN, KEBUDAYAAN,} &  \tiny Gedung Widya Puraya\\
+%                & \tiny Jalan Prof. Sudarto, S.H.\\
+&\\
+				\bfseries DIPONEGORO &  \\
+& \\
+				\bfseries UNIVERSITY & \large\bfseries Letter Of Recommendation\\
+		\end{tabular}
+
+	\end{spacing}
+\end{minipage}
+
+\vspace{-2em}% vetor space
+
+\hfill\rule{.85\linewidth}{1pt} % Horizontal rule
+\vspace{-1.5em}% make the date more close to the horizontal line
+%-----------------------------text-----------------------------%
+%%%Note: you can edit text below
+
+
+\hfill
+\begin{tabular}{l @{}}
+    \DTMusedate{mydate}\\ % Date
+\end{tabular}
+%%%Note: your name replaces Jay Chou
+
+\hspace*{\longindentation}\Dearblock\hspace*{\fill}\par % Print today's date, remove \today to not display it
+\vspace{10pt}
+
+Dear Sir/Madam,
+
+I am writing this letter of reference at the request of Muhammad Uliah Shafar, who is applying for the scholarship program.
+I was Uliah's lecturer in the Architecture Department at University of Diponegoro.
+As a part of M.Ars studies, Uliah was enrolled in my Urban Planning and Residential and Housing courses during the first year of his course.
+My interaction with him became stronger when he started developing his master's degree thesis entitled: \textit{Visitor Preference on Public Space in Senggol Waterfront Parepare}, under my supervision.
+
+Uliah was an outstanding student, exceptionally diligent and hardworking.
+He was always attending, participating, and actively well engaging in the educational program.
+He often raised a question or left a comment that triggers a whole class's discussion.
+Not only that, he had successfully written a thesis that later gave him an overall graduate GPA of 4.0.
+During the thesis activity, Uliah became very interested in Urban Space research.
+His thesis under my supervision enriched his experience in data collection, data elaboration and statistical analysis.
+
+Uliah has the motivation and interest on higher education.
+He has been progressively working towards it with an extraordinary determination and sincerity.
+If the accomplishment of his academic endeavor is a good indication of how he would be seen on his future education, he would be a positive asset to your scholarship program. %Therefore I highly recommend him for Uliah to receive your scholarship.
+As a lecture who is willing to take a part of students' success, I fully encourage you to consider him for your scholarship program.
+
+
+Yours sincerely,
+%%%Note:add signature
+\begin{spacing}{1}
+
+\vspace{5em}
+\rule{5cm}{1pt} \\% Horizontal rule
+%%%Note:prof.'s name replaces Andy Lau
+Dr. Ars. Ir. Wijayanti, M.Eng.,\\
+Lecturer of Architecture Department,\\
+Diponegoro University,\\
+email: \href{mailto:wijayanti.jaft@gmail.com}{\textcolor{darkblue}{wijayanti.jaft@gmail.com}}
+\end{spacing}
+
+\begin{comment}
+\newpage
+
+
+\textbf{Why should the applicant be considered for a Scholarship?}
+
+I was Uliah's lecturer in the Architecture Department at Diponegoro University.
+As a part of M.Ars studies, Uliah was enrolled in my Urban Planning and Residential and Housing courses during the first year of his course. I also had a chance to supervise him while he was developing his thesis entitled: Visitor Preference on Public Space in Senggol Waterfront Parepare.
+
+I observed Uliah as an outstanding student, exceptionally diligent and hardworking.
+He was always attending, participating, and actively well engaging in the educational program.
+He often raised a question or left a comment that triggers a whole class's discussion.
+In addition, he had successfully written a thesis that later gave him an overall graduate GPA of 4.0.
+His thesis has enriched his experience in data collection, data elaboration and statistical analysis, under my supervision.
+
+I am extremely confident that Uliah would fit in your scholarship program. Since he has been eagerly showing his interest and motivation on higher education. If the accomplishment of his academic endeavor is a good indication of how he would be seen on his future education, he would be a positive asset to your scholarship. As a lecture who is willing to take a part of student's success, I fully encourage you to consider him for this scholarship.
+
+---
+
+Please comment on evidence of the applicant’s research potential and achievement (such as the outcomes of their research experience and training, including university studies, publications, papers, and other relevant work) and any other comments relevant to the applicant’s admission to a PhD (maximum 300 words).
+
+
+Uliah was always giving 100\% of his effort on everything he did.
+Every time the tasks were given to him, he collected them  punctually and accurately.
+The contents of his tasks were understandably written and comprehensive. In the last term of his course, he had all of his subjects that I had taught receiving good marks.
+
+Beside his courses, I had supervised Uliah on developing his thesis for around one year. Since beginning, he proposed urban space topic about preference on waterfront public space. In his thesis, he covered the need of public space today for accommodating its visitor in Parepare. The data was well presented with superb narration. The discussion that he served on his thesis result in good conclusion which addressed the initial problem. In the end, he had successfully made his thesis earning grade A.
+
+While he was still a student, Uliah had submitted a publication on national reputable journal called Nature. The title of his article was regarding of evaluation of public space which was the square of Parepare city.
+The determination to write a thesis and publications to his maximum effort has been nothing short of applause-worthy. Therefore, I am confident that Uliah will make an excellent addition to the PhD program with AAS scholarship.
+
+
+
+
+
+\newpage
+
+\end{comment}
+
+
+
+\end{document}
