@@ -15,8 +15,10 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage[left=2.75cm, right=2.75cm, top=1.50cm, bottom=1.50cm]{geometry}
-\usepackage{times}%Times New Roman font
+%\usepackage{times}%Times New Roman font
+\usepackage{courier}
 \usepackage{tabularx}
+\usepackage{enumitem}
 \usepackage{setspace}
 \usepackage{ragged2e}
 \usepackage{color}
@@ -27,5 +29,6 @@
 \setlength{\parskip}{1em} %Vertical space between paragraphs
 \pagestyle{empty} % Suppress headers and footers
 \usepackage{comment}
+\usepackage{lipsum}
 
 \usepackage[english, calc]{datetime2} %Formating date or DTMtoday command, files ldf needs customization. Removes showdayofweek.
