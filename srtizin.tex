@@ -1,0 +1,138 @@
+%!TEX program = xelatex
+\documentclass[12pt,a4paper]{lor}
+%----------------------------------------------------------------------------------------
+%	DEFINE CUSTOM COMMANDS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\Sch}[1]{\renewcommand{\Sch}{#1}}
+\newcommand{\Plc}[1]{\renewcommand{\Plc}{#1}}
+\newcommand{\Dear}[1]{\renewcommand{\Dear}{#1}}
+\newcommand{\Who}[1]{\renewcommand{\Who}{#1}}
+\newcommand{\Title}[1]{\renewcommand{\Title}{#1}}
+
+\Sch{Your Scholarship}
+\Plc{Turkiye}
+\Dear{The Turkiye Government\\Scholarship Committee}
+\Who{Imam Fadly}
+\Title{, ST., MT,} % Your title, leave blank for no title
+
+\newcommand{\Dearblock}{
+	\parbox[t]{0.48\textwidth}{ % Box holding the author details; width value specifies where it starts and ends, increase to move details left
+		\footnotesize % Use a smaller font size for the details
+		\textit{\Dear}\\ % The author details text, all italicised
+\\
+%		\Sch\\ % Author name
+	}
+}
+
+\signature{\Who\Title} % The signature is a combination of the author's name and title
+\renewcommand{\closing}[1]{
+	\vspace{2.5mm} % Some whitespace after the letter content and before the signature
+	\noindent % Stop paragraph indentation
+	\hspace*{\longindentation} % Move the signature right to the value of \longindentation
+	\parbox{\indentedwidth}{
+		\raggedright
+		#1 % Print the signature text
+		\vskip 1.95cm % Whitespace between the closing text and author's name for a physical signature
+        \begin{spacing}{.75}
+
+		\textbf{\fromsig} \\ % Prints the value of \signature{}, i.e. author name and title
+\small Head of Department\\
+\small Dept. of Urban \& Regional Planning\\
+\small Muhammadiyah University Parepare\\
+\small email: imamfdly@gmail.com
+        \end{spacing}
+	}
+}
+
+\begin{document}
+\begin{comment}
+
+%-----------------------------Letterhead-----------------------------%
+%%%Note: please do not change anything
+	\begin{minipage}[c]{0.13\linewidth}
+			\centering
+			\includegraphics[height=2.3cm]{logo.png}
+%			\vspace{0.2em}
+	\end{minipage}
+\begin{minipage}[c]{35em}
+	\begin{spacing}{0.5}
+            \color{darkblue}
+		\begin{tabular}{p{6cm}>{\raggedleft\arraybackslash}p{6.7cm}}
+				%\cline{1-2}
+%				\multirow{2}{*}{\bfseries KEMENTRIAN PENDIDIKAN, KEBUDAYAAN,} &  \tiny Gedung Widya Puraya\\
+%                & \tiny Jalan Prof. Sudarto, S.H.\\
+&\\
+				\bfseries DIPONEGORO &  \\
+& \\
+				\bfseries UNIVERSITY & \large\bfseries Letter Of Recommendation\\
+		\end{tabular}
+
+	\end{spacing}
+\end{minipage}
+\end{comment}
+
+\begin{center}
+    \large{SURAT IZIN PIMPINAN}
+\end{center}
+%\vspace{-2em}% vetor space
+
+%\hfill\rule{.85\linewidth}{1pt} % Horizontal rule
+%\vspace{-1.5em}% make the date more close to the horizontal line
+%-----------------------------text-----------------------------%
+%%%Note: you can edit text below
+
+
+%\hfill
+%\begin{tabular}{l @{}}
+%    \DTMusedate{mydate}\\ % Date
+%\end{tabular}
+%%%Note: your name replaces Jay Chou
+
+%\hspace*{\longindentation}\Dearblock\hspace*{\fill}\par % Print today's date, remove \today to not display it
+%\vspace{10pt}
+
+
+Yang bertanda tangan dibawah ini:
+
+\begin{spacing}{1.56}
+
+    \begin{tabular}{p{.3\textwidth}@{}l@{}}
+    Nama  & : \ldots \\
+    NIP *)  & : \ldots  \\
+    Pangkat / Gol & : \\
+    Jabatan & : \\
+    Instansi & : \\
+    Alamat Instansi & : \\
+    No. Telp./ Handphone & : \\
+    E-mail & : \\
+    \end{tabular}
+\end{spacing}
+
+Memberikan izin untuk mendaftar BPI Kemendikbudristek (Calon Guru SMK/Beasiswa Indonesia Maju/Pendidikan PTA/Pendidikan PTV/Dosen LPTK/Pendidikan Profesi Guru/University Oxford) kepada :
+
+    \begin{tabular}{p{.3\textwidth}@{}l@{}}
+    Nama  & : Muhammad Uliah Shafar \\
+    Instansi  & : Universitas Muhammadiyah Parepare  \\
+    Alamat  & : Jl. Jend. Ahmad Yani Km. 6, Parepare   \\
+    \end{tabular}
+
+Deskripsi alasan pemberian izin:
+
+Demikian surat izin ini dibuat dengan sebenar-benarnya untuk dapat digunakan sebagaimana mestinya.
+
+
+%%%Note:add signature
+\begin{flushright}
+
+\begin{spacing}{1}
+Makassar, 21 Maret 2023\\
+
+\vspace{5em}
+\rule{5cm}{1pt} \\% Horizontal rule
+%%%Note:prof.'s name replaces Andy Lau
+(Pemberi Izin)
+\end{spacing}
+\end{flushright}
+
+\end{document}

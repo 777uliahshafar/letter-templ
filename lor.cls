@@ -7,11 +7,11 @@
 \PassOptionsToPackage{quiet}{fontspec}
 \LoadClass{letter} % Load the base class
 
-\usepackage{ctex}
+%\usepackage{ctex}
 %\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{amsmath}
-\usepackage{amssymb}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage[left=2.75cm, right=2.75cm, top=1.50cm, bottom=1.50cm]{geometry}
 \usepackage{times}%Times New Roman font

@@ -8,7 +8,7 @@
 \LoadClass{letter} % Load the base class
 
 
-\usepackage{ctex}
+%\usepackage{ctex}
 %\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
