@@ -1,0 +1,135 @@
+\documentclass[12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\usepackage{polyglossia} %LuaLatex Compiler Engine
+\setmainlanguage[variant=indonesian]{malay}
+\setotherlanguages{english}
+\PolyglossiaSetup{malay}{indentfirst=true}
+\setlength\parindent{0pt} % Set no indent entire doc
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+
+\usepackage[bahasai, calc]{datetime2}
+\DTMsavedate{born}{1996-06-26}
+
+\usepackage{tabularx,array,caption,boldline}
+\usepackage{booktabs} % Required for better horizontal rules in tables
+\usepackage{cellspace}
+\setlength\cellspacetoplimit{4pt}
+\setlength\cellspacebottomlimit{4pt}
+
+\usepackage{enumitem}
+\pagenumbering{gobble}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{setspace} %Alter spacing in paragraph
+\doublespace %Specify spacing of setspace
+\usepackage{comment}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT MARGINS
+%----------------------------------------------------------------------------------------
+
+\usepackage{geometry} % Required for adjusting page dimensions and margins
+
+\geometry{
+	paper=a4paper, % Paper size, change to letterpaper for US letter size
+	top=3cm, % Top margin
+	bottom=3cm, % Bottom margin
+	left=3cm, % Left margin
+	right=2cm, % Right margin
+	headheight=0.75cm, % Header height
+	footskip=1.5cm, % Space from the bottom margin to the baseline of the footer
+	headsep=0.75cm, % Space from the top margin to the baseline of the header
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT META
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-4ex}SURAT REKOMENDASI AKADEMISI}
+\author{}
+\date{\vspace{-6ex}}
+%\date{}
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\usepackage{titlesec} %explicitly state the sectional title as #1, where you can now wrap it within \MakeUppercase
+
+\titleformat{\section} %command
+{\normalfont\fontsize{12}{15}\filcenter\bfseries\MakeUppercase}%format
+{}%label
+{0pt}%sep space between number n title
+{\vspace{2pt}}%before-title
+[]%after-title
+
+\titlespacing\section{0pt}
+{12pt plus 4pt minus 2pt}
+{12pt plus 2pt minus 2pt}
+
+
+%----------------------------------------------------------------------------------------
+%	EXTRAS
+%----------------------------------------------------------------------------------------
+% Make rectangular box
+\newcommand{\makenonemptybox}[2]{%
+%\par\nobreak\vspace{\ht\strutbox}\noindent
+\fbox{% added -2\fboxrule to specified width to avoid overfull hboxes
+% and removed the -2\fboxsep from height specification (image not updated)
+% because in MWE 2cm is should be height of contents excluding sep and frame
+\parbox[c][#1][t]{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+  \hrule width \hsize height 0pt
+  #2
+ }%
+}%
+\par\vspace{\ht\strutbox}
+}
+\makeatother
+
+% Make dot as lenght answer
+\newcommand\fillin[1][3cm]{\makebox[#1]{\dotfill}}
+
+\begin{document}
+
+\section{Surat Pernyataan Keaslian Dokumen}
+
+Saya yang bertanda tangan di bawah ini:
+
+\begin{table}[htpb]
+\renewcommand{\arraystretch}{1.25}
+    \begin{tabular}{p{4cm}l}
+Nama & : Muhammad Uliah Shafar\\
+NIK & : 7372022606960016\\
+Alamat & : Jl. Handayani no. 7, rt/rw 002/006, Ujung, Kota Parepare\\
+    \end{tabular}
+\end{table}
+
+menyatakan dengan sesungguhnya bahwa dokumen, data, informasi, dan/atau keterangan yang saya sampaikan, berikan, kirimkan, dan/atau isikan untuk keperluan mendaftar pada Program Pascasarjana di Universitas Gadjah Mada adalah benar, sah, dan/atau sesuai dengan keadaan dan/atau kenyataan.
+
+Saya bersedia didiskualifikasi sebagai pendaftar dan menerima sanksi/diproses sesuai prosedur dan ketentuan hukum yang berlaku apabila dokumen, data, informasi, dan/atau keterangan tersebut tidak sesuai dengan ketentuan di atas.
+
+Demikian surat pernyataan ini dibuat dengan sebenarnya, tanpa paksaan dari pihak manapun.
+\vspace{\baselineskip}
+
+{\raggedleft
+\begin{tabular}{l@{}}
+Parepare, \fillin[3cm] 2022 \\
+Yang menyatakan, \\
+\\
+\\
+\\
+\\
+(\fillin[6cm])\\
+\end{tabular}\par}
+\end{document}
