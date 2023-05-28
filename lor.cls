@@ -13,13 +13,14 @@
 %\usepackage{amsmath}
 %\usepackage{amssymb}
 \usepackage{graphicx}
-\usepackage[left=2.75cm, right=2.75cm, top=1.50cm, bottom=1.50cm]{geometry}
+\usepackage[left=2.75cm, right=2.75cm, top=3cm, bottom=3cm]{geometry}
 \usepackage{times}%Times New Roman font
 \usepackage{tabularx}
 \usepackage{setspace}
+\doublespacing
 \usepackage{color}
 \definecolor{darkblue}{RGB}{25,25,112}
-\usepackage{multirow}
+%\usepackage{multirow}
 \usepackage[colorlinks]{hyperref}
 \setlength{\parindent}{0pt} %Paragraph indentation
 \setlength{\parskip}{1em} %Vertical space between paragraphs
