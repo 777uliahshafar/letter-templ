@@ -75,25 +75,51 @@
 []%after-title
 
 \titlespacing\section{0pt}
-{12pt plus 4pt minus 2pt}
-{12pt plus 2pt minus 2pt}
+ {12pt plus 4pt minus 2pt}
+ {12pt plus 2pt minus 2pt}
 
+
+%----------------------------------------------------------------------------------------
+%	Header and footer
+%----------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr} % Required for customising headers and footers
+\pagestyle{fancy} % Enable custom headers and footers
+
+\renewcommand{\headrulewidth}{0pt} % Remove default top horizontal rule
+\addtolength{\headwidth}{3cm}
+% headers content
+\rhead{
+	\scriptsize
+	\begin{tabular}{@{}l@{}l@{}}
+		\raggedright
+		Lorem & : Ipsum \\
+		Lorem & : Ipsum \\
+	\end{tabular}
+}
+\lfoot{
+	\scriptsize
+	\begin{minipage}{\textwidth}
+		Lorem ipsum\\
+		Lorem ipsum\\
+	\end{minipage}
+}
 
 %----------------------------------------------------------------------------------------
 %	EXTRAS
 %----------------------------------------------------------------------------------------
 % Make rectangular box
 \newcommand{\makenonemptybox}[2]{%
-%\par\nobreak\vspace{\ht\strutbox}\noindent
-\fbox{% added -2\fboxrule to specified width to avoid overfull hboxes
-% and removed the -2\fboxsep from height specification (image not updated)
-% because in MWE 2cm is should be height of contents excluding sep and frame
-\parbox[c][#1][t]{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
-  \hrule width \hsize height 0pt
-  #2
- }%
-}%
-\par\vspace{\ht\strutbox}
+	%\par\nobreak\vspace{\ht\strutbox}\noindent
+	\fbox{% added -2\fboxrule to specified width to avoid overfull hboxes
+		% and removed the -2\fboxsep from height specification (image not updated)
+		% because in MWE 2cm is should be height of contents excluding sep and frame
+		\parbox[c][#1][t]{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+			\hrule width \hsize height 0pt
+			#2
+		}%
+	}%
+	\par\vspace{\ht\strutbox}
 }
 \makeatother
 
@@ -107,12 +133,12 @@
 Saya yang bertanda tangan di bawah ini:
 
 \begin{table}[htpb]
-\renewcommand{\arraystretch}{1.25}
-    \begin{tabular}{p{4cm}l}
-Nama & : Muhammad Uliah Shafar\\
-NIK & : 7372022606960016\\
-Alamat & : Jl. Handayani no. 7, rt/rw 002/006, Ujung, Kota Parepare\\
-    \end{tabular}
+	\renewcommand{\arraystretch}{1.25}
+	\begin{tabular}{p{4cm}l}
+		Nama   & : Muhammad Uliah Shafar                                    \\
+		NIK    & : 7372022606960016                                         \\
+		Alamat & : Jl. Handayani no. 7, rt/rw 002/006, Ujung, Kota Parepare \\
+	\end{tabular}
 \end{table}
 
 menyatakan dengan sesungguhnya bahwa dokumen, data, informasi, dan/atau keterangan yang saya sampaikan, berikan, kirimkan, dan/atau isikan untuk keperluan mendaftar pada Program Pascasarjana di Universitas Gadjah Mada adalah benar, sah, dan/atau sesuai dengan keadaan dan/atau kenyataan.
@@ -123,13 +149,13 @@ Demikian surat pernyataan ini dibuat dengan sebenarnya, tanpa paksaan dari pihak
 \vspace{\baselineskip}
 
 {\raggedleft
-\begin{tabular}{l@{}}
-Parepare, \fillin[3cm] 2022 \\
-Yang menyatakan, \\
-\\
-\\
-\\
-\\
-(\fillin[6cm])\\
-\end{tabular}\par}
+	\begin{tabular}{l@{}}
+		Parepare, \fillin[3cm] 2022 \\
+		Yang menyatakan,            \\
+		\\
+		\\
+		\\
+		\\
+		(\fillin[6cm])              \\
+	\end{tabular}\par}
 \end{document}
